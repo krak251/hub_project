@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BudgetManager</class>
+ <widget class="QMainWindow" name="BudgetManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>296</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="income">
+       <attribute name="title">
+        <string>Доходы</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="income_layout">
+          <item>
+           <widget class="QLineEdit" name="income_label"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="income_add_button">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="income_del_button">
+            <property name="text">
+             <string>Удалить выбранное</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="tableWidget_2"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="expense">
+       <attribute name="title">
+        <string>Расходы</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="expense_layout">
+          <item>
+           <widget class="QLineEdit" name="expense_label"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="expense_add_button">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="expense_del_button">
+            <property name="text">
+             <string>Удалить выбранное</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTableWidget" name="expense_table"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="calculation">
+       <attribute name="title">
+        <string>Итоговая сумма</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4" rowstretch="4,1">
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="spacing">
+         <number>5</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="calculation_label">
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>12 321 412</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="calculation_layout" stretch="0">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="calculation_button">
+            <property name="text">
+             <string>Расчитать</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>296</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="export_menu">
+    <property name="title">
+     <string>Сохранение в CSV</string>
+    </property>
+    <addaction name="export_income"/>
+    <addaction name="export_expense"/>
+   </widget>
+   <widget class="QMenu" name="imporn_menu">
+    <property name="title">
+     <string>Загрузить из CSV</string>
+    </property>
+    <addaction name="import_income"/>
+    <addaction name="import_expense"/>
+   </widget>
+   <addaction name="export_menu"/>
+   <addaction name="imporn_menu"/>
+  </widget>
+  <action name="export_income">
+   <property name="text">
+    <string>Сохранить доходы</string>
+   </property>
+  </action>
+  <action name="export_expense">
+   <property name="text">
+    <string>Сохранить расходы</string>
+   </property>
+  </action>
+  <action name="import_income">
+   <property name="text">
+    <string>Загрузить доходы</string>
+   </property>
+  </action>
+  <action name="import_expense">
+   <property name="text">
+    <string>Загрузить расходы</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
